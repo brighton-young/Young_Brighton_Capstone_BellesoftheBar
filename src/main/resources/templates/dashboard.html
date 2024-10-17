@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Your Dashboard</h1>
+  <h2>My Bookings</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Event Name</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Guest Count</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="booking : ${bookings}">
+      <td th:text="${booking.id}">1</td>
+      <td th:text="${booking.event.eventName}">Wedding</td>
+      <td th:text="${#dates.format(booking.event.eventDate, 'dd-MM-yyyy')}">01-01-2024</td>
+      <td th:text="${booking.event.loc
