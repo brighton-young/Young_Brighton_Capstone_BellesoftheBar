@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <body>
 <div class="container">
@@ -21,8 +21,20 @@
     <tbody>
     <tr th:each="service : ${services}">
       <td th:text="${service.id}">1</td>
+      <td th:text="${service.serviceName}">Standard Bar Setup</td>
+      <td th:text="${service.description}">Full bar setup with mixers, glassware, and garnishes.</td>
+      <td th:text="${service.pricePerHour}">$150</td>
+    </tr>
+    <tr th:each="service : ${services}">
+      <td th:text="${service.id}">2</td>
       <td th:text="${service.serviceName}">Signature Cocktails</td>
       <td th:text="${service.description}">Professional mixologist to craft signature cocktails.</td>
+      <td th:text="${service.pricePerHour}">$200</td>
+    </tr>
+    <tr th:each="service : ${services}">
+      <td th:text="${service.id}">3</td>
+      <td th:text="${service.serviceName}">Beer and Wine Only</td>
+      <td th:text="${service.description}">Simple beer and wine bar service.</td>
       <td th:text="${service.pricePerHour}">$100</td>
     </tr>
     </tbody>
