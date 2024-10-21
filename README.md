@@ -1,5 +1,3 @@
----
-
 ## **Belles of the Bar - Capstone Project**
 
 Welcome to **Belles of the Bar** — an online booking and event management system for premium bartending services. This project was developed as part of my Java Developer Capstone, demonstrating full-stack development using **Spring Boot** and **Thymeleaf** with a **MySQL** backend.
@@ -9,14 +7,14 @@ Welcome to **Belles of the Bar** — an online booking and event management syst
 ---
 
 ### **Table of Contents**
-- [Project Overview](#project-overview)  
-- [Technologies Used](#technologies-used)  
-- [Features](#features)  
-- [Database Schema](#database-schema)  
-- [Installation and Setup](#installation-and-setup)  
-- [Endpoints](#endpoints)  
-- [Screenshots](#screenshots)  
-- [Future Improvements](#future-improvements)  
+- [Project Overview](#project-overview)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Database Schema](#database-schema)
+- [Installation and Setup](#installation-and-setup)
+- [Endpoints](#endpoints)
+- [Screenshots](#screenshots)
+- [Future Improvements](#future-improvements)
 - [License](#license)
 
 ---
@@ -121,104 +119,41 @@ Follow these steps to set up the project locally:
 ## **Endpoints**
 | **Method** | **Endpoint**            | **Description**                        |
 |------------|-------------------------|----------------------------------------|
-| `POST`     | `/register`             | Register a new user                   |
-| `POST`     | `/login`                | Log in an existing user               |
-| `GET`      | `/services`             | View available services               |
-| `POST`     | `/bookings/new`         | Create a new booking                  |
-| `GET`      | `/dashboard`            | View user’s bookings                  |
-| `GET`      | `/admin`                | Access the admin panel                |
+| `POST`     | `/register`             | Register a new user                    |
+| `POST`     | `/login`                | User login                             |
+| `GET`      | `/events`               | List all events                        |
+| `POST`     | `/events`               | Create a new event                     |
+| `GET`      | `/bookings`             | List all bookings                      |
+| `POST`     | `/bookings`             | Create a new booking                   |
+| `DELETE`   | `/bookings/{id}`        | Delete a booking                       |
 
 ---
 
 ## **Screenshots**
-### **Home Page**
-![Home Page](src/main/resources/static/images/homepage.png)
+Here are some screenshots of the application:
 
-### **User Dashboard**
-![User Dashboard](src/main/resources/static/images/dashboard.png)
+1. **Home Page:**
+   ![Home Page](src/main/resources/static/images/screenshots/home.png)
 
-### **Admin Panel**
-![Admin Panel](src/main/resources/static/images/adminpanel.png)
+2. **Registration Page:**
+   ![Registration Page](src/main/resources/static/images/screenshots/registration.png)
+
+3. **User Dashboard:**
+   ![User Dashboard](src/main/resources/static/images/screenshots/dashboard.png)
+
+4. **Admin Panel:**
+   ![Admin Panel](src/main/resources/static/images/screenshots/admin-panel.png)
 
 ---
 
 ## **Future Improvements**
-- **Payment Integration:** Add a payment gateway (e.g., Stripe or PayPal) to accept payments online.
-- **Email Notifications:** Send automated email notifications for booking confirmations or updates.
-- **Responsive Design:** Improve the frontend to make it fully mobile responsive.
-- **Analytics Dashboard:** Add visualizations and insights for event trends and user activity.
+Future improvements for the project include:
+- Implementing REST API for mobile integration.
+- Adding social media login functionality.
+- Improving the UI design for better user experience.
+- Introducing more analytics and reporting features for administrators.
 
 ---
 
 ## **License**
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-### **Contact**
-If you have any questions or feedback, feel free to reach out:
-
-- **Email:** bright.young@outlook.com
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/brighton-young)
-
----
-
-## **Acknowledgments**
-This project was developed as part of my Capstone for the **Full Stack Java Developer Program** at Per Scholas. Special thanks to my instructors and peers for their guidance and support.
-
----
-
-project-root/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── bellesofthebar/
-│   │   │           ├── config/
-│   │   │           │   └── SecurityConfig.java
-│   │   │           ├── controller/
-│   │   │           │   ├── BookingController.java
-│   │   │           │   ├── EventController.java
-│   │   │           │   ├── ServiceController.java
-│   │   │           │   └── UserController.java
-│   │   │           ├── model/
-│   │   │           │   ├── Booking.java
-│   │   │           │   ├── Event.java
-│   │   │           │   ├── Service.java
-│   │   │           │   └── User.java
-│   │   │           ├── repository/
-│   │   │           │   ├── BookingRepository.java
-│   │   │           │   ├── EventRepository.java
-│   │   │           │   ├── ServiceRepository.java
-│   │   │           │   └── UserRepository.java
-│   │   │           ├── service/
-│   │   │           │   ├── BookingService.java
-│   │   │           │   ├── EventService.java
-│   │   │           │   ├── ServiceService.java
-│   │   │           │   └── UserService.java
-│   │   │           ├── exception/
-│   │   │           │   ├── ResourceNotFoundException.java
-│   │   │           │   └── BookingConflictException.java
-│   │   │           └── util/
-│   │   │               └── DateUtil.java
-│   │   └── resources/
-│   │       ├── static/
-│   │       │   ├── css/
-│   │       │   │   └── styles.css
-│   │       │   ├── js/
-│   │       │   │   └── script.js
-│   │       │   └── images/
-│   │       │       └── logo.png
-│   │       ├── templates/
-│   │       │   ├── index.html
-│   │       │   ├── login.html
-│   │       │   ├── register.html
-│   │       │   ├── booking-form.html
-│   │       │   ├── dashboard.html
-│   │       │   ├── admin-panel.html
-│   │       │   └── services.html
-│   │       └── application.properties
-└── pom.xml
-#   Y o u n g _ B r i g h t o n _ C a p s t o n e _ B e l l e s o f t h e B a r 
- 
- 
